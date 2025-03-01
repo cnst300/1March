@@ -3,11 +3,21 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f8ff;
+    background: linear-gradient(45deg, #ff7b7b, #ff9e9e, #fdb9c8, #ffb6c1);
+    background-size: 600% 600%;
+    animation: gradientAnimation 15s ease infinite;
     flex-direction: column;
     text-align: center;
     font-family: Arial, sans-serif;
+    overflow: hidden;
 }
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 .container {
     position: relative;
     width: 200px;
@@ -27,6 +37,17 @@ body {
 }
 .message {
     margin-top: 20px;
-    font-size: 1.2em;
+    font-size: 1.8em;
     color: #2c3e50;
+    text-shadow: rgba(169, 13, 207, 0.589) 0.5px 1px;
+}
+
+#butterfly-container{
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 300px; 
+    height: 300px;
+    z-index: -10000;
 }
