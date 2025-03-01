@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+    flex-direction: column;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+.snowdrop {
+    position: absolute;
+    bottom: -50px;
+    width: 50px;
+    height: 100px;
+    animation: grow 3s ease-in-out forwards;
+}
+@keyframes grow {
+    0% { bottom: -50px; opacity: 0; }
+    50% { bottom: 10px; opacity: 1; }
+    100% { bottom: 0px; opacity: 1; }
+}
+.message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #2c3e50;
+}
